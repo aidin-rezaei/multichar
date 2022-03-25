@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Cookies from 'js-cookie'
 function Home() {
@@ -10,7 +10,7 @@ function Home() {
         setUser(e.target.value)
     }
     const login = (e) => {
-        if (valname != '') {
+        if (valname !== '') {
             Cookies.set('name', user)
             setclassmodal("modaluser hidemodal")
         }
@@ -26,7 +26,7 @@ function Home() {
                 <div className="box-join">
                     <h2 className="titleboxhome">enter your name</h2>
                     <input className="inputtokn" type="text" onChange={valuename} placeholder="Write the your name" />
-                    <a onClick={login} className="btn">login</a>
+                    <button onClick={login} className="btn">login</button>
                 </div>
             </div>
             <div className="titlelogo">

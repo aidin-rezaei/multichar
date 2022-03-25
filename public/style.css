@@ -2,39 +2,46 @@
     font-family: "IRSANS";
     src: url("ir_sans.ttf") format("truetype");
 }
+
 @font-face {
     font-family: "Betzmann";
     src: url("Betzmann.otf") format("truetype");
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
 }
-body,html{
+
+body, html {
     width: 100%;
     height: 100%;
     background-color: #000;
     font-family: "IRSANS";
     /* background-color: #313131; */
 }
-#root{
+
+#root {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.fullhome{
+
+.fullhome {
     /* baed max shavad */
     position: relative;
     width: 414px;
     height: 100%;
     background-color: #313131;
+    overflow: hidden;
 }
-.titlelogo{
+
+.titlelogo {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -46,28 +53,33 @@ body,html{
     text-shadow: 4px 4px #ff0000, 8px 8px #00d9ff, 12px 12px #d9ff00;
     padding: 50px 10px;
 }
-.aidinr,.aidinr a{
+
+.aidinr, .aidinr a {
     font-size: 12px;
     text-shadow: none;
     color: #fff;
     font-family: "IRSANS";
     margin-top: 10px;
 }
-.box-create{
+
+.box-create {
     width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
 }
-.btn{
+
+.btn {
+    all: unset;
     color: #fff;
     padding: 5px 20px;
     background: #00d9ff;
     border-radius: 5px;
 
 }
-.box-join{
+
+.box-join {
     width: 100%;
     padding: 20px 0;
     display: flex;
@@ -75,27 +87,247 @@ body,html{
     justify-content: center;
     align-items: center;
 }
-.inputtokn{
+
+.inputtokn {
     font-size: 15px;
     padding: 5px 20px;
     margin: 20px 0;
 }
-.titleboxhome{
+
+.titleboxhome {
     color: #fff;
     text-align: center;
 }
-.box-create .btn{margin: 20px 0;}
-.wellcome{
+
+.box-create .btn {
+    margin: 20px 0;
+}
+
+.wellcome {
     padding: 20px 100px;
     margin-bottom: 20px;
-    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
+    background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 100%);
 }
-.modaluser{
+
+.modaluser {
     width: 100%;
     height: 100%;
     position: absolute;
     background-color: #313131;
 }
-.hidemodal{
+
+.hidemodal {
     display: none;
+}
+
+.title-game {
+    width: 100%;
+    height: 50px;
+    background: #313131;
+}
+
+.titlelogo2 {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Betzmann";
+    font-size: 12px;
+    color: #fff;
+    text-shadow: 1px 1px #ff0000, 2px 2px #00d9ff, 3px 3px #d9ff00;
+}
+
+.title-game2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background: #313131;
+    color: rgb(255, 230, 0);
+    padding: 0 20px;
+}
+
+.exit {
+    color: rgb(255, 128, 128);
+}
+
+.copylink {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background: #6d6d6d;
+
+}
+
+.copylink .linkgame {
+    width: 75%;
+    background: transparent;
+    color: #fff;
+    font-size: 14px;
+    padding: 0 20px;
+    border: none;
+}
+
+.copylink button {
+    background: #999999;
+    color: #fff;
+    font-size: 15px;
+    padding: 5px;
+    margin-right: 20px;
+    border: none;
+}
+
+.succopy {
+    position: absolute;
+    z-index: 111;
+    width: 100%;
+    text-align: center;
+    color: rgb(0, 255, 115);
+    background: rgba(0, 0, 0, 0.616);
+    padding: 8px;
+    top: 0;
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.calssanimcopy {
+    opacity: 1;
+    top: 100%;
+}
+
+.boxpleyer {
+    position: absolute;
+    top: calc(100% - 50px);
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 11;
+    transition: 1s all cubic-bezier(1, 0.06, 0.65, 0.94);
+}
+
+.topboxpleyer {
+    top: -50px;
+}
+
+.btnopenbox {
+    color: #fff;
+    text-align: center;
+    background: #313131;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    padding-top: 5px;
+}
+
+.btnopenbox p {
+    margin-top: -5px;
+}
+
+.closeplred {
+    color: rgb(252, 79, 79);
+    margin-top: 10px;
+}
+
+.cantentpleyer {
+    width: 100%;
+    height: 100vh;
+    background: #313131;
+    margin-top: -50px;
+    z-index: -1;
+    padding-top: 60px;
+}
+
+.itempleyer {
+    display: flex;
+    color: #fff;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+}
+
+.itempleyer i, .itempleyer span {
+    padding: 5px;
+    width: 50%;
+}
+
+.itempleyer span::after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    margin-left: 5px;
+    background: #2bff01;
+    border-radius: 5px;
+    animation: cheshmak 3s infinite;
+}
+
+@keyframes cheshmak {
+    0% {
+        opacity: 0.4;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.4;
+    }
+}
+.background{
+    background: url('back.jpg') center/cover;
+}
+.boxjvab{
+    width: 90%;
+    height: 100px;
+    backdrop-filter: blur(8px) saturate(100%) contrast(80%) brightness(130%);
+    margin: 80px auto;
+    border-radius: 50px;
+    border: solid .5px #999999;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.753);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.boxjvab p{
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 0 20px #000;
+}
+
+.horofbox{
+    width: 100%;
+    display: flex;
+    padding: 50px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.horofbox p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 40px;
+    margin: 10px;
+    backdrop-filter: blur(10px) saturate(100%) contrast(70%) brightness(130%);
+    border-radius: 10px;
+    border: solid .5px #999999;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 0 20px #000;
+    user-select: none;
+
+}
+.disblep{
+    pointer-events: none;
+    opacity: 0.5;
 }
