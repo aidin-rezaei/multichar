@@ -1,7 +1,101 @@
+@font-face {
+    font-family: "IRSANS";
+    src: url("ir_sans.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Betzmann";
+    src: url("Betzmann.otf") format("truetype");
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+}
+body,html{
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    font-family: "IRSANS";
+    /* background-color: #313131; */
+}
+#root{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fullhome{
+    /* baed max shavad */
+    position: relative;
+    width: 414px;
+    height: 100%;
+    background-color: #313131;
+}
+.titlelogo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Betzmann";
+    font-size: 30px;
+    color: #fff;
+    text-shadow: 4px 4px #ff0000, 8px 8px #00d9ff, 12px 12px #d9ff00;
+    padding: 50px 10px;
+}
+.aidinr,.aidinr a{
+    font-size: 12px;
+    text-shadow: none;
+    color: #fff;
+    font-family: "IRSANS";
+    margin-top: 10px;
+}
+.box-create{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.btn{
+    color: #fff;
+    padding: 5px 20px;
+    background: #00d9ff;
+    border-radius: 5px;
+
+}
+.box-join{
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.inputtokn{
+    font-size: 15px;
+    padding: 5px 20px;
+    margin: 20px 0;
+}
+.titleboxhome{
+    color: #fff;
+    text-align: center;
+}
+.box-create .btn{margin: 20px 0;}
+.wellcome{
+    padding: 20px 100px;
+    margin-bottom: 20px;
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
+}
+.modaluser{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #313131;
+}
+.hidemodal{
+    display: none;
 }
