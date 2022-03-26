@@ -1,7 +1,13 @@
-import React, { useState,useEffect  } from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+// import { Link } from "react-router-dom";
 import Cookies from 'js-cookie'
 function Game() {
+    function httpGet(theUrl) {
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.open("GET", theUrl, true); // false for synchronous request
+        xmlHttp.send(null);
+        return xmlHttp.responseText;
+    }
     const [classmodlink, setclassmodlink] = useState("succopy")
     const [classopenmodpl, setclassopenmodpl] = useState("boxpleyer")
     const [valuejavab, setvaluejavab] = useState("")
@@ -22,10 +28,19 @@ function Game() {
 
     const clickkalame = (e) => {
         e.target.className = "disblep"
+        setvaluejavab(valuejavab + e.target.innerText)
     }
-    
+
+
+    window.addEventListener("beforeunload", function () {
+        httpGet("https://aidinr.ir/multichar/api.php?stuse=offline&shash=" + Cookies.get('name'))
+    })
+    window.addEventListener("load", function () {
+        httpGet("https://aidinr.ir/multichar/api.php?stuse=online&shash=" + Cookies.get('name'))
+    })
+
     return (
-        <div className="fullhome background">
+        <div className="fullhome background" >
             <div className={classopenmodpl} >
                 <div className="btnopenbox" onClick={openmodpl}>
                     <i className="fa fa-angle-up"></i>
